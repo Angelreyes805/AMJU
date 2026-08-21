@@ -41,7 +41,7 @@ export const storeHours = [
 // "Information" links block from the live site.
 export const informationLinks = [
   { label: "Shipping/Handling & Return Policy", href: "/shipping-returns" },
-  { label: "Cookies/Privacy Notice", href: "/privacy-policy" },
+  { label: "Cookies/Privacy Notice", href: "/cook" },
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Contact information", href: "/contact" },
   { label: "About", href: "/about" },

@@ -1,0 +1,20 @@
+// ==========================================================================
+// Pages / About  — block: .about
+// ==========================================================================
+@use "../abstracts" as *;
+
+.about {
+  max-width: 52rem;
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+
+  &__block h2 {
+    margin-bottom: $space-3;
+  }
+
+  &__text {
+    color: $color-gray-500;
+    line-height: 1.8;
+  }
+}

@@ -1,0 +1,58 @@
+// ==========================================================================
+// Components / Form  — block: .form
+// ==========================================================================
+@use "../abstracts" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-3;
+
+    @include respond("sm") {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+  }
+
+  &__label {
+    font-size: 0.8125rem;
+    font-weight: $fw-semibold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $color-gray-500;
+  }
+
+  &__input {
+    padding: 0.8rem 1rem;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    background-color: $color-white;
+    transition: border-color $transition-fast, box-shadow $transition-fast;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+    }
+
+    &--textarea {
+      resize: vertical;
+      min-height: 8rem;
+    }
+  }
+
+  &__note {
+    font-size: 0.8125rem;
+    color: $color-text-muted;
+  }
+}

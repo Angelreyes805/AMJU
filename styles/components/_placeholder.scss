@@ -1,0 +1,30 @@
+// ==========================================================================
+// Components / Placeholder  — block: .placeholder (Forum / Members shells)
+// ==========================================================================
+@use "../abstracts" as *;
+
+.placeholder {
+  max-width: 40rem;
+  margin-inline: auto;
+  text-align: center;
+  padding: $space-7 $space-4;
+  border: 1px dashed $color-border;
+  border-radius: $radius-lg;
+  background-color: $color-bg-alt;
+
+  &__title {
+    margin-bottom: $space-3;
+  }
+
+  &__text {
+    color: $color-gray-500;
+    line-height: 1.7;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: $space-3;
+    margin-top: $space-5;
+  }
+}

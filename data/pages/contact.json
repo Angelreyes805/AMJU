@@ -1,0 +1,40 @@
+{
+  "title": "Contact",
+  "slug": "contact",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Contact",
+      "level": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "Below you will find all our contact information please do not hesitate to contact us."
+    },
+    {
+      "type": "heading",
+      "text": "Let's Chat",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Phone"
+    },
+    {
+      "type": "paragraph",
+      "text": "Email"
+    },
+    {
+      "type": "paragraph",
+      "text": "928-750-8492"
+    },
+    {
+      "type": "paragraph",
+      "text": "management@amjunlimited.com"
+    },
+    {
+      "type": "paragraph",
+      "text": "Social Media"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "note": "Placeholder FAQ entries — the live site loads these from Wix at runtime, so they can't be scraped. Replace with the real questions/answers.",
+  "items": [
+    {
+      "q": "What are your shipping options?",
+      "a": "$10.99 flat rate shipping is available to the domestic 48 states. Shipping to Alaska, Hawaii, and overseas is available upon shipping quote request. See our Shipping & Returns page for full details."
+    },
+    {
+      "q": "What is your return policy?",
+      "a": "All sales are final, and no exchanges or refunds will be issued. If a product is found to be defective or missing parts, an exchange may be requested. Please contact us before ordering if you have any questions."
+    },
+    {
+      "q": "What payment methods do you accept?",
+      "a": "We currently accept PayPal and debit/credit card. Checks are not accepted."
+    },
+    {
+      "q": "Do you carry kits from smaller companies?",
+      "a": "Yes. These 'Experienced Builder' kits may have fitment issues, varied material quality, or slight color differences, and some box damage may be present. These characteristics do not qualify as defects."
+    }
+  ]
+}

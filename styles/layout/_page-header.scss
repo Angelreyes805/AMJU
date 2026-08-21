@@ -1,0 +1,30 @@
+// ==========================================================================
+// Layout / Page header  — block: .page-header (interior pages)
+// ==========================================================================
+@use "../abstracts" as *;
+
+.page-header {
+  background: linear-gradient(120deg, $color-navy 0%, $color-primary-dark 100%);
+  color: $color-white;
+  padding-block: $space-7;
+
+  @include respond("md") {
+    padding-block: $space-8 $space-7;
+  }
+
+  &__eyebrow {
+    color: $color-accent-light;
+  }
+
+  &__title {
+    color: $color-white;
+    margin-top: $space-2;
+  }
+
+  &__subtitle {
+    margin-top: $space-3;
+    max-width: 44rem;
+    color: rgba($color-white, 0.85);
+    font-size: 1.0625rem;
+  }
+}

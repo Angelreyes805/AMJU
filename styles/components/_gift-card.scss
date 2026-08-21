@@ -1,0 +1,68 @@
+// ==========================================================================
+// Components / Gift card  — block: .gift-card
+// ==========================================================================
+@use "../abstracts" as *;
+
+.gift-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-6;
+  align-items: center;
+
+  @include respond("md") {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__preview {
+    aspect-ratio: 16 / 10;
+    border-radius: $radius-lg;
+    background: linear-gradient(135deg, $color-primary 0%, $color-navy 100%);
+    box-shadow: $shadow-lg;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: $space-1;
+    padding: $space-5;
+    color: $color-white;
+  }
+
+  &__brand {
+    font-family: $font-heading;
+    font-weight: $fw-bold;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+  }
+
+  &__label {
+    color: $color-accent-light;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.8125rem;
+  }
+
+  &__price {
+    font-family: $font-heading;
+    font-size: 2rem;
+    font-weight: $fw-bold;
+    color: $color-primary;
+  }
+
+  &__text {
+    margin-block: $space-3 $space-4;
+    color: $color-gray-500;
+    line-height: 1.7;
+  }
+
+  &__amounts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+    margin-bottom: $space-4;
+  }
+
+  &__note {
+    margin-top: $space-2;
+    font-size: 0.8125rem;
+    color: $color-text-muted;
+  }
+}

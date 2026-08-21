@@ -17,6 +17,7 @@
 // -- Layout -----------------------------------------------------------------
 @use "layout/header";
 @use "layout/footer";
+@use "layout/page-header";
 
 // -- Components -------------------------------------------------------------
 @use "components/button";
@@ -25,6 +26,13 @@
 @use "components/featured";
 @use "components/social-bar";
 @use "components/product-card";
+@use "components/prose";
+@use "components/form";
+@use "components/accordion";
+@use "components/gift-card";
+@use "components/placeholder";
 
 // -- Pages ------------------------------------------------------------------
 @use "pages/home";
+@use "pages/about";
+@use "pages/contact";

@@ -1,0 +1,41 @@
+// ==========================================================================
+// Pages / Contact  — block: .contact
+// ==========================================================================
+@use "../abstracts" as *;
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-6;
+
+  @include respond("md") {
+    grid-template-columns: 1fr 1.4fr;
+    gap: $space-8;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+  }
+
+  &__label {
+    font-family: $font-heading;
+    font-size: 0.8125rem;
+    font-weight: $fw-semibold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-accent;
+    margin-bottom: $space-1;
+  }
+
+  &__value {
+    font-size: 1.0625rem;
+    color: $color-navy;
+
+    &--address {
+      font-style: normal;
+      line-height: 1.6;
+    }
+  }
+}
