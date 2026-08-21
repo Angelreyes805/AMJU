@@ -4,6 +4,7 @@ import { getProducts } from "@/lib/store/api";
 import { asset } from "@/lib/asset";
 import { site } from "@/lib/site";
 import type { Product } from "@/lib/store/types";
+import ProductGrid from "@/components/ProductGrid/ProductGrid";
 
 function priceLabel(p: Product): string {
   return p.price != null ? `$${p.price.toFixed(2)}` : "";
@@ -74,37 +75,7 @@ export default async function HomePage() {
             </p>
           </div>
 
-          <div className="home__product-grid">
-            {grid.map((product) => (
-              <article key={product.id} className="product-card">
-                <Link href={`/shop/${product.slug}`} className="product-card__media">
-                  <Image
-                    className="product-card__img"
-                    src={asset(product.images[0].src)}
-                    alt={product.images[0].alt ?? product.name}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    style={{ objectFit: "cover" }}
-                  />
-                  {!product.inStock && (
-                    <span className="product-card__badge">Out of Stock</span>
-                  )}
-                </Link>
-                <div className="product-card__body">
-                  <Link href={`/shop/${product.slug}`}>
-                    <h3 className="product-card__name">{product.name}</h3>
-                  </Link>
-                  <p className="product-card__price">{priceLabel(product)}</p>
-                  <button
-                    className="btn btn--primary btn--sm btn--block"
-                    disabled={!product.inStock}
-                  >
-                    {product.inStock ? "Add to Cart" : "Out of Stock"}
-                  </button>
-                </div>
-              </article>
-            ))}
-          </div>
+          <ProductGrid products={grid.slice(0, 12)} />
 
           <div className="home__cta">
             <Link href="/shop" className="btn btn--primary btn--lg">

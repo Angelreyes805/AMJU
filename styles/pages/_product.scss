@@ -1,0 +1,86 @@
+// ==========================================================================
+// Pages / Product detail  — block: .product
+// ==========================================================================
+@use "../abstracts" as *;
+
+.product {
+  &__breadcrumb {
+    font-size: 0.875rem;
+    color: $color-text-muted;
+    margin-bottom: $space-4;
+
+    a:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-6;
+
+    @include respond("md") {
+      grid-template-columns: 1fr 1fr;
+      gap: $space-8;
+      align-items: start;
+    }
+  }
+
+  &__media {
+    background-color: $color-gray-100;
+    border-radius: $radius-lg;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+
+    &--empty {
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  &__name {
+    font-size: fluid(1.75rem, 2.5rem);
+  }
+
+  &__price {
+    margin-top: $space-3;
+    font-family: $font-heading;
+    font-size: 1.75rem;
+    font-weight: $fw-bold;
+    color: $color-primary;
+  }
+
+  &__stock {
+    margin-top: $space-2;
+    font-size: 0.875rem;
+    font-weight: $fw-semibold;
+
+    &.is-in {
+      color: $color-primary;
+    }
+
+    &.is-out {
+      color: $color-accent-dark;
+    }
+  }
+
+  &__description {
+    margin-top: $space-4;
+    color: $color-gray-500;
+    line-height: 1.8;
+  }
+
+  &__actions {
+    margin-top: $space-5;
+    max-width: 22rem;
+  }
+
+  &__note {
+    margin-top: $space-2;
+    font-size: 0.8125rem;
+    color: $color-text-muted;
+  }
+}

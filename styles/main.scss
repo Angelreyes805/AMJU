@@ -26,13 +26,17 @@
 @use "components/featured";
 @use "components/social-bar";
 @use "components/product-card";
+@use "components/product-grid";
 @use "components/prose";
 @use "components/form";
 @use "components/accordion";
 @use "components/gift-card";
 @use "components/placeholder";
+@use "components/video-embed";
 
 // -- Pages ------------------------------------------------------------------
 @use "pages/home";
 @use "pages/about";
 @use "pages/contact";
+@use "pages/product";
+@use "pages/blog";

@@ -9,7 +9,11 @@
     "start": "next start",
     "lint": "next lint",
     "scrape": "python3 scripts/scrape_images.py",
-    "scrape:all": "python3 scripts/scrape_images.py --all-pages"
+    "scrape:all": "python3 scripts/scrape_images.py --all-pages",
+    "scrape:pages": "python3 scripts/scrape_pages.py",
+    "scrape:products": "python3 scripts/scrape_products.py --sitemap",
+    "scrape:videos": "python3 scripts/scrape_videos.py",
+    "scrape:blog": "python3 scripts/scrape_blog.py"
   },
   "dependencies": {
     "next": "^15.1.0",

@@ -1,0 +1,19 @@
+// ==========================================================================
+// Components / Product grid  — block: .product-grid (reused: home + shop)
+// ==========================================================================
+@use "../abstracts" as *;
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-3;
+
+  @include respond("md") {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-4;
+  }
+
+  @include respond("lg") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
