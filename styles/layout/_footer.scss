@@ -17,20 +17,34 @@
     grid-template-columns: 1fr;
     gap: $space-6;
 
-    @include respond("md") {
-      grid-template-columns: 1.5fr repeat(3, 1fr);
+    @include respond("sm") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond("lg") {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 
-  &__brand {
-    max-width: 22rem;
+  &__address {
+    font-style: normal;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: rgba($color-white, 0.75);
   }
 
-  &__tagline {
-    margin-top: $space-3;
-    font-size: 0.9375rem;
-    line-height: 1.6;
-    color: rgba($color-white, 0.7);
+  &__hours {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    font-size: 0.875rem;
+    color: rgba($color-white, 0.75);
+  }
+
+  &__hours-row {
+    display: flex;
+    justify-content: space-between;
+    gap: $space-3;
   }
 
   &__col-title {

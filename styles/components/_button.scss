@@ -27,6 +27,12 @@
     transform: translateY(0);
   }
 
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
   // -- Variants ------------------------------------------------------------
   &--primary {
     background-color: $color-primary;

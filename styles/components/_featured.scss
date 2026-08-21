@@ -1,0 +1,67 @@
+// ==========================================================================
+// Components / Featured product  — block: .featured
+// The live homepage leads with a single hero product.
+// ==========================================================================
+@use "../abstracts" as *;
+
+.featured {
+  background: linear-gradient(180deg, $color-navy 0%, $color-primary-dark 100%);
+  color: $color-white;
+  padding-block: $space-7;
+
+  @include respond("md") {
+    padding-block: $space-8;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-6;
+    align-items: center;
+
+    @include respond("md") {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__media {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 34rem;
+    height: auto;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-lg;
+    background-color: $color-white;
+  }
+
+  &__title {
+    color: $color-white;
+    margin-top: $space-3;
+    font-size: fluid(2rem, 3.25rem);
+  }
+
+  &__price {
+    margin-top: $space-3;
+    font-family: $font-heading;
+    font-size: fluid(1.5rem, 2rem);
+    font-weight: $fw-bold;
+    color: $color-accent-light;
+  }
+
+  &__text {
+    margin-top: $space-4;
+    color: rgba($color-white, 0.85);
+    max-width: 32rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-3;
+    margin-top: $space-5;
+  }
+}

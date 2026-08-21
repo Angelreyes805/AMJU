@@ -1,0 +1,35 @@
+// ==========================================================================
+// Components / Social bar  — block: .social-bar
+// ==========================================================================
+@use "../abstracts" as *;
+
+.social-bar {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-pill;
+    background-color: rgba($color-white, 0.1);
+    color: $color-white;
+    transition: background-color $transition-base, color $transition-base,
+      transform $transition-fast;
+
+    &:hover {
+      background-color: $color-accent;
+      color: $color-white;
+      transform: translateY(-2px);
+    }
+  }
+
+  // On light backgrounds (if reused outside the footer).
+  &--light &__link {
+    background-color: $color-gray-100;
+    color: $color-navy;
+  }
+}

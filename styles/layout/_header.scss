@@ -79,6 +79,22 @@
     gap: $space-3;
   }
 
+  &__icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-pill;
+    color: $color-navy;
+    transition: background-color $transition-fast, color $transition-fast;
+
+    &:hover {
+      background-color: $color-gray-100;
+      color: $color-primary;
+    }
+  }
+
   &__toggle {
     display: inline-flex;
 

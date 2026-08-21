@@ -32,8 +32,18 @@ export default function Header() {
         </nav>
 
         <div className="header__actions">
-          <Link href="/shop" className="btn btn--accent btn--sm">
-            Shop Now
+          <Link href="/members" className="header__icon-link" aria-label="My Account">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.4" />
+              <path d="M5.5 19a6.5 6.5 0 0 1 13 0" />
+            </svg>
+          </Link>
+          <Link href="/shop" className="header__icon-link" aria-label="Cart">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
+              <path d="M4 5h2l1.6 9.5A2 2 0 0 0 9.6 16h7a2 2 0 0 0 2-1.6L20 8H6.2" />
+              <circle cx="10" cy="20" r="1.3" />
+              <circle cx="17" cy="20" r="1.3" />
+            </svg>
           </Link>
           <button
             className="header__toggle btn btn--ghost btn--sm"
