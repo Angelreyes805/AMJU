@@ -1,0 +1,73 @@
+// ==========================================================================
+// Layout / Footer  — block: .footer
+// ==========================================================================
+@use "../abstracts" as *;
+
+.footer {
+  background-color: $color-navy;
+  color: rgba($color-white, 0.82);
+  padding-block: $space-7 $space-5;
+
+  &__inner {
+    @include container($container-max);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-6;
+
+    @include respond("md") {
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+    }
+  }
+
+  &__brand {
+    max-width: 22rem;
+  }
+
+  &__tagline {
+    margin-top: $space-3;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: rgba($color-white, 0.7);
+  }
+
+  &__col-title {
+    font-family: $font-heading;
+    font-size: 0.8125rem;
+    font-weight: $fw-semibold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-white;
+    margin-bottom: $space-3;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+  }
+
+  &__link {
+    font-size: 0.9375rem;
+    color: rgba($color-white, 0.75);
+
+    &:hover {
+      color: $color-accent-light;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-3;
+    margin-top: $space-6;
+    padding-top: $space-4;
+    border-top: 1px solid rgba($color-white, 0.12);
+    font-size: 0.8125rem;
+    color: rgba($color-white, 0.55);
+  }
+}

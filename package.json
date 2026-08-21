@@ -1,0 +1,26 @@
+{
+  "name": "amju-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Next.js + BEM/SCSS rebuild of amjunlimited.com",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "scrape": "python3 scripts/scrape_images.py",
+    "scrape:all": "python3 scripts/scrape_images.py --all-pages"
+  },
+  "dependencies": {
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "sass": "^1.83.0",
+    "typescript": "^5.7.0"
+  }
+}

@@ -1,0 +1,7 @@
+// ==========================================================================
+// Abstracts / Index — forwarded so partials can `@use "../abstracts" as *;`
+// ==========================================================================
+@forward "variables";
+@forward "breakpoints";
+@forward "functions";
+@forward "mixins";

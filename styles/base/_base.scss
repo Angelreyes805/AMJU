@@ -1,0 +1,43 @@
+// ==========================================================================
+// Base / Global helpers
+// ==========================================================================
+@use "../abstracts" as *;
+
+:focus-visible {
+  outline: 3px solid $color-primary-light;
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.u-container {
+  @include container($container-max);
+}
+
+.u-container--wide {
+  @include container($container-wide);
+}
+
+.u-visually-hidden {
+  @include visually-hidden;
+}
+
+// Vertical rhythm for stacked page sections.
+.section {
+  padding-block: $space-7;
+
+  @include respond("md") {
+    padding-block: $space-8;
+  }
+
+  &--tight {
+    padding-block: $space-6;
+  }
+
+  &--alt {
+    background-color: $color-bg-alt;
+  }
+}

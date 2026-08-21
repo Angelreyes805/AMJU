@@ -1,0 +1,28 @@
+// ==========================================================================
+// main.scss — 7-1 architecture entry point (BEM naming throughout)
+// Imported once in app/layout.tsx.
+//
+//   abstracts/  → variables, breakpoints, functions, mixins (no CSS output)
+//   base/       → reset, typography, global helpers
+//   layout/     → header, footer (macro page regions)
+//   components/  → reusable UI blocks (btn, card, hero, product-card)
+//   pages/      → page-specific overrides
+// ==========================================================================
+
+// -- Base -------------------------------------------------------------------
+@use "base/reset";
+@use "base/typography";
+@use "base/base";
+
+// -- Layout -----------------------------------------------------------------
+@use "layout/header";
+@use "layout/footer";
+
+// -- Components -------------------------------------------------------------
+@use "components/button";
+@use "components/card";
+@use "components/hero";
+@use "components/product-card";
+
+// -- Pages ------------------------------------------------------------------
+@use "pages/home";

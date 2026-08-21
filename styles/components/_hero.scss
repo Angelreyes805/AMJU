@@ -1,0 +1,66 @@
+// ==========================================================================
+// Components / Hero  — block: .hero
+// ==========================================================================
+@use "../abstracts" as *;
+
+.hero {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  color: $color-white;
+  overflow: hidden;
+
+  &__media {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      100deg,
+      rgba($color-navy, 0.85) 0%,
+      rgba($color-navy, 0.55) 55%,
+      rgba($color-navy, 0.2) 100%
+    );
+  }
+
+  &__inner {
+    @include container($container-max);
+  }
+
+  &__content {
+    max-width: 42rem;
+    padding-block: $space-8;
+  }
+
+  &__title {
+    color: $color-white;
+    font-size: fluid(2.5rem, 4.5rem);
+    margin-top: $space-3;
+  }
+
+  &__text {
+    margin-top: $space-4;
+    font-size: fluid(1rem, 1.25rem);
+    color: rgba($color-white, 0.9);
+    max-width: 34rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-3;
+    margin-top: $space-5;
+  }
+}

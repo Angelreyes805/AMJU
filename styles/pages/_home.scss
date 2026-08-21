@@ -1,0 +1,50 @@
+// ==========================================================================
+// Pages / Home  — block: .home
+// ==========================================================================
+@use "../abstracts" as *;
+
+.home {
+  &__intro {
+    text-align: center;
+    max-width: 44rem;
+    margin-inline: auto;
+    margin-bottom: $space-6;
+  }
+
+  &__intro-text {
+    margin-top: $space-3;
+    color: $color-text-muted;
+    font-size: 1.0625rem;
+  }
+
+  // Shipping banner — mirrors the site's "$10.99 flat rate shipping" strip.
+  &__shipping {
+    background-color: $color-primary;
+    color: $color-white;
+    text-align: center;
+    padding-block: $space-3;
+    font-family: $font-heading;
+    font-weight: $fw-medium;
+    letter-spacing: 0.02em;
+  }
+
+  &__product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-3;
+
+    @include respond("md") {
+      grid-template-columns: repeat(3, 1fr);
+      gap: $space-4;
+    }
+
+    @include respond("lg") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__cta {
+    text-align: center;
+    margin-top: $space-6;
+  }
+}

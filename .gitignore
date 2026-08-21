@@ -17,5 +17,17 @@ tmp/
 .env.local
 .env.*.local
 
-# Dependencies (if a JS toolchain is added later)
+# Dependencies
 node_modules/
+
+# Next.js
+.next/
+out/
+build/
+next-env.d.ts
+*.tsbuildinfo
+
+# Python scraper
+scripts/__pycache__/
+.venv/
+venv/

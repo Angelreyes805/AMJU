@@ -1,0 +1,17 @@
+// ==========================================================================
+// Abstracts / Functions
+// ==========================================================================
+@use "sass:math";
+
+/// Convert a pixel value to rem (assumes 16px root).
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+/// Fluid type/space value that scales between two viewport widths.
+/// @example font-size: fluid(1.25rem, 2rem);
+@function fluid($min, $max, $min-vw: 480px, $max-vw: 1240px) {
+  $slope: math.div($max - $min, $max-vw - $min-vw);
+  $intercept: $min - $slope * $min-vw;
+  @return clamp(#{$min}, #{$intercept} + #{$slope * 100}vw, #{$max});
+}

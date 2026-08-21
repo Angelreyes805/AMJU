@@ -1,0 +1,85 @@
+// ==========================================================================
+// Components / Button  — block: .btn
+// ==========================================================================
+@use "../abstracts" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  font-family: $font-heading;
+  font-size: 0.9375rem;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  padding: 0.9rem 1.75rem;
+  border-radius: $radius-sm;
+  border: 2px solid transparent;
+  transition: background-color $transition-base, color $transition-base,
+    border-color $transition-base, transform $transition-fast;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  // -- Variants ------------------------------------------------------------
+  &--primary {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-primary-dark;
+      color: $color-white;
+    }
+  }
+
+  &--accent {
+    background-color: $color-accent;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-accent-dark;
+      color: $color-white;
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border-color: $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+
+  &--ghost {
+    background-color: transparent;
+    color: $color-navy;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  // -- Sizes ---------------------------------------------------------------
+  &--sm {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.8125rem;
+  }
+
+  &--lg {
+    padding: 1.1rem 2.25rem;
+    font-size: 1rem;
+  }
+
+  &--block {
+    width: 100%;
+  }
+}

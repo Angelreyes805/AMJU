@@ -1,0 +1,80 @@
+// ==========================================================================
+// Components / Product card  — block: .product-card
+// Used by the store grid. Data is provided by the store data-layer
+// (lib/store) so it can later be backed by the live commerce API.
+// ==========================================================================
+@use "../abstracts" as *;
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  overflow: hidden;
+  transition: box-shadow $transition-base, transform $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-4px);
+  }
+
+  &__media {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    background-color: $color-gray-100;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__badge {
+    position: absolute;
+    top: $space-2;
+    left: $space-2;
+    background-color: $color-accent;
+    color: $color-white;
+    font-family: $font-heading;
+    font-size: 0.6875rem;
+    font-weight: $fw-semibold;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.6rem;
+    border-radius: $radius-sm;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    padding: $space-3;
+    flex: 1;
+  }
+
+  &__name {
+    font-family: $font-body;
+    font-size: 0.9375rem;
+    font-weight: $fw-medium;
+    color: $color-navy;
+    @include line-clamp(2);
+  }
+
+  &__price {
+    margin-top: auto;
+    font-family: $font-heading;
+    font-size: 1.125rem;
+    font-weight: $fw-bold;
+    color: $color-primary;
+  }
+
+  &__price-original {
+    margin-left: $space-2;
+    font-size: 0.875rem;
+    font-weight: $fw-regular;
+    color: $color-text-muted;
+    text-decoration: line-through;
+  }
+}

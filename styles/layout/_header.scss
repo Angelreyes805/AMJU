@@ -1,0 +1,89 @@
+// ==========================================================================
+// Layout / Header  — block: .header
+// ==========================================================================
+@use "../abstracts" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+  width: 100%;
+  background-color: rgba($color-white, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid $color-border;
+
+  &__inner {
+    @include container($container-max);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: $header-height;
+    gap: $space-4;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    flex-shrink: 0;
+  }
+
+  &__logo {
+    height: 52px;
+    width: auto;
+  }
+
+  &__nav {
+    display: none;
+
+    @include respond("lg") {
+      display: block;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: $space-5;
+  }
+
+  &__link {
+    font-family: $font-heading;
+    font-size: 0.9375rem;
+    font-weight: $fw-medium;
+    letter-spacing: 0.02em;
+    color: $color-navy;
+    padding-block: $space-2;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: $color-accent;
+      transition: width $transition-base;
+    }
+
+    &:hover::after,
+    &--active::after {
+      width: 100%;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+  }
+
+  &__toggle {
+    display: inline-flex;
+
+    @include respond("lg") {
+      display: none;
+    }
+  }
+}

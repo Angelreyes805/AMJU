@@ -1,0 +1,78 @@
+// ==========================================================================
+// Abstracts / Variables
+// Brand palette extracted from the live Wix theme of amjunlimited.com
+// ==========================================================================
+
+// -- Brand colors ----------------------------------------------------------
+$color-white:          #ffffff;
+$color-black:          #000000;
+
+$color-primary:        #0d5eba; // Wix --color_18 (brand blue)
+$color-primary-dark:   #093f7c; // Wix --color_19
+$color-navy:           #041f3e; // Wix --color_20 (deep navy)
+$color-primary-light:  #709dd1; // Wix --color_17
+$color-primary-pale:   #a0c2e8; // Wix --color_16
+
+$color-accent:         #e57022; // Wix --color_23 (orange)
+$color-accent-dark:    #994b17; // Wix --color_24
+$color-accent-light:   #eeb188; // Wix --color_22
+
+// -- Neutrals --------------------------------------------------------------
+$color-gray-100:       #f4f4f4;
+$color-gray-200:       #d4d4d4; // Wix --color_12
+$color-gray-300:       #b0b0b0; // Wix --color_10
+$color-gray-400:       #909090; // Wix --color_13
+$color-gray-500:       #606060; // Wix --color_14
+
+// -- Semantic --------------------------------------------------------------
+$color-text:           $color-navy;
+$color-text-muted:     $color-gray-500;
+$color-bg:             $color-white;
+$color-bg-alt:         $color-gray-100;
+$color-border:         $color-gray-200;
+
+// -- Typography ------------------------------------------------------------
+// Font families are injected as CSS variables by next/font (see app/layout.tsx).
+// Substitutes for the licensed Wix fonts: Montserrat (Avenir), Jost (Futura/DIN).
+$font-body:    var(--font-body), "Montserrat", -apple-system, "Segoe UI", sans-serif;
+$font-heading: var(--font-heading), "Jost", -apple-system, "Segoe UI", sans-serif;
+
+$fw-light:     300;
+$fw-regular:   400;
+$fw-medium:    500;
+$fw-semibold:  600;
+$fw-bold:      700;
+$fw-black:     900;
+
+// -- Spacing scale (8pt) ---------------------------------------------------
+$space-1:  0.25rem;  //  4px
+$space-2:  0.5rem;   //  8px
+$space-3:  1rem;     // 16px
+$space-4:  1.5rem;   // 24px
+$space-5:  2rem;     // 32px
+$space-6:  3rem;     // 48px
+$space-7:  4rem;     // 64px
+$space-8:  6rem;     // 96px
+
+// -- Layout ----------------------------------------------------------------
+$container-max:   1240px;
+$container-wide:  1600px;
+$header-height:   88px;
+
+// -- Radius / shadow / motion ----------------------------------------------
+$radius-sm:  4px;
+$radius-md:  8px;
+$radius-lg:  16px;
+$radius-pill: 999px;
+
+$shadow-sm:  0 1px 3px rgba(0, 0, 0, 0.12);
+$shadow-md:  0 6px 20px rgba(4, 31, 62, 0.12);
+$shadow-lg:  0 16px 40px rgba(4, 31, 62, 0.18);
+
+$transition-fast: 150ms ease;
+$transition-base: 250ms ease;
+
+// -- Z-index ---------------------------------------------------------------
+$z-header:   1000;
+$z-overlay:  1100;
+$z-modal:    1200;

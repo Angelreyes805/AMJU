@@ -1,0 +1,54 @@
+// ==========================================================================
+// Base / Typography
+// ==========================================================================
+@use "../abstracts" as *;
+
+html {
+  font-size: 100%; // 16px base
+}
+
+body {
+  font-family: $font-body;
+  font-weight: $fw-regular;
+  color: $color-text;
+  background-color: $color-bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: $fw-bold;
+  line-height: 1.1;
+  color: $color-navy;
+}
+
+h1 { font-size: fluid(2.25rem, 4rem); }
+h2 { font-size: fluid(1.75rem, 2.75rem); }
+h3 { font-size: fluid(1.375rem, 2rem); }
+h4 { font-size: fluid(1.125rem, 1.5rem); }
+
+p {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+a {
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.u-eyebrow {
+  font-family: $font-heading;
+  font-size: 0.8125rem;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $color-accent;
+}
