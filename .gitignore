@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / tooling
+.vscode/
+.idea/
+*.swp
+
+# Logs & temp
+*.log
+tmp/
+*.tmp
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Dependencies (if a JS toolchain is added later)
+node_modules/
