@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { mainNav, site } from "@/lib/site";
+import { asset } from "@/lib/asset";
 
 export default function Header() {
   return (
@@ -10,7 +11,7 @@ export default function Header() {
           {/* next/image applies the GitHub Pages basePath (/AMJU) to the src. */}
           <Image
             className="header__logo"
-            src="/images/brand/amju-logo.png"
+            src={asset("/images/brand/amju-logo.png")}
             alt={site.name}
             width={83}
             height={52}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getProducts } from "@/lib/store/api";
+import { asset } from "@/lib/asset";
 import { site } from "@/lib/site";
 
 export default async function HomePage() {
@@ -17,7 +18,7 @@ export default async function HomePage() {
         <div className="hero__media">
           <Image
             className="hero__img"
-            src="/images/home/home-hero-01.jpg"
+            src={asset("/images/home/home-hero-01.jpg")}
             alt="Gundam and mecha model kits"
             fill
             sizes="100vw"
@@ -65,7 +66,7 @@ export default async function HomePage() {
                     <div className="product-card__media">
                       <Image
                         className="product-card__img"
-                        src={product.images[0]?.src ?? "/images/placeholder.png"}
+                        src={asset(product.images[0]?.src ?? "/images/placeholder.png")}
                         alt={product.images[0]?.alt ?? product.name}
                         fill
                         sizes="(max-width: 768px) 50vw, 25vw"
