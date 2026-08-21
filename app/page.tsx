@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getProducts } from "@/lib/store/api";
 import { site } from "@/lib/site";
 
@@ -14,11 +15,14 @@ export default async function HomePage() {
       {/* Hero */}
       <section className="hero">
         <div className="hero__media">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             className="hero__img"
             src="/images/home/home-hero-01.jpg"
             alt="Gundam and mecha model kits"
+            fill
+            sizes="100vw"
+            priority
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div className="hero__overlay" />
@@ -59,11 +63,13 @@ export default async function HomePage() {
                 <article key={product.id} className="product-card">
                   <Link href={`/shop/${product.slug}`}>
                     <div className="product-card__media">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         className="product-card__img"
                         src={product.images[0]?.src ?? "/images/placeholder.png"}
                         alt={product.images[0]?.alt ?? product.name}
+                        fill
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        style={{ objectFit: "cover" }}
                       />
                     </div>
                     <div className="product-card__body">

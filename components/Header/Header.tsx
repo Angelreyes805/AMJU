@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { mainNav, site } from "@/lib/site";
 
 export default function Header() {
@@ -6,14 +7,14 @@ export default function Header() {
     <header className="header">
       <div className="header__inner">
         <Link href="/" className="header__brand" aria-label={`${site.name} home`}>
-          {/* Logo image is downloaded by the scraper to /public/images/brand/. */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          {/* next/image applies the GitHub Pages basePath (/AMJU) to the src. */}
+          <Image
             className="header__logo"
             src="/images/brand/amju-logo.png"
             alt={site.name}
-            width={160}
+            width={83}
             height={52}
+            priority
           />
         </Link>
 
